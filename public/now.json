@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "alias": "noteful-trina",
+  "name": "noteful",
+  "routes": [
+      { "handle": "filesystem" },
+      { "src": "/.*", "dest": "/index.html" }
+  ]
+}
