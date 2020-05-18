@@ -17,7 +17,7 @@ export default class AddNote extends Component {
     const newNote = {
       name: e.target['note-name'].value,
       content: e.target['note-content'].value,
-      folderId: e.target['note-folder-id'].value,
+      folder_id: e.target['note-folder-id'].value,
       modified: new Date(),
     }
     fetch(`${config.API_ENDPOINT}/notes`, {
@@ -46,7 +46,7 @@ export default class AddNote extends Component {
     return (
       <section className="add-note">
         <h2>Create a Note</h2>
-        <NotefulForm onSubmit = {this.handleSubmit}>
+        <NotefulForm onSubmit = {e => this.handleSubmit(e)}>
           <label htmlFor="note-name">Name</label>
           <input type="text" id="note-name" required/>
           <label htmlFor="content">Content</label>

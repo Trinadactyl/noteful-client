@@ -19,7 +19,7 @@ export default class AddFolder extends Component {
     const folder = {
       name: e.target['folder-name'].value
     }
-
+    
   fetch(`${config.API_ENDPOINT}/folders`, {
     method: 'POST', 
     headers: {
@@ -41,7 +41,6 @@ export default class AddFolder extends Component {
   })
 }
   
-
   render(){
     return (
       <section className="addfolder">
